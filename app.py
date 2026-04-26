@@ -67,6 +67,7 @@ if st.button("Predict Price"):
 
     # predict
     prediction = model.predict(input_scaled)
+    prediction = prediction / 100   # adjust scale
 
     # display
     st.success(f"💰 Estimated House Price: ${prediction[0]:,.2f}")
